@@ -55,12 +55,16 @@ h1 {
 @media (min-width: 768px) and (max-width: 991px) {
   .section {
     width: 50%;
+    float: left;
   }
 
-  .section:nth-child(3) {
+  /* Force only the third box (Sushi) to go full width and clear the previous floats */
+  .section:nth-of-type(3) {
     width: 100%;
+    clear: both;
   }
 }
+
 
 /* Mobile view (≤767px) */
 @media (max-width: 767px) {
