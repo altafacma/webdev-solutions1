@@ -37,6 +37,17 @@ h1 {
   font-weight: bold;
   box-sizing: border-box;
 }
+#chicken .section-title {
+  background-color: #f4a261; /* orange */
+}
+
+#beef .section-title {
+  background-color: #e76f51; /* red */
+}
+
+#sushi .section-title {
+  background-color: #2a9d8f; /* teal */
+}
 
 
 /* Tablet view (768px–991px) */
