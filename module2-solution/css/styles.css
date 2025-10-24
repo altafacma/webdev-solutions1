@@ -119,7 +119,7 @@ h1 {
     width: 100%;          /* each box fills the full width */
     float: none;          /* stop floating for stacking */
     clear: both;          /* ensures each starts on a new line */
-    margin-bottom: 20px;  /* space between each box */
+    margin-bottom: 15px;  /* space between each box */
   }
 
   /* Remove bottom margin from the last (Sushi) box */
