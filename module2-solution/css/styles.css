@@ -75,31 +75,31 @@ h1 {
 
 /* Tablet view (768px–991px) */
 @media (min-width: 768px) and (max-width: 991px) {
-  .section {
-    float: left;
-    width: 50%;
+
+  /* Add nice padding on the left and right sides of the page */
+  body {
+    padding-left: 2%;
+    padding-right: 2%;
   }
 
-  .section:nth-of-type(3) {
-    width: 100%;
-    clear: both;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
+  /* Style each section box */
   .section {
-    float: left;
-    width: 49%;           /* slightly smaller to fit side-by-side */
-    margin-right: 2%;     /* add spacing between Chicken and Beef */
+    float: left;          /* allows Chicken & Beef to sit side by side */
+    width: 49%;           /* each takes about half of the screen */
+    margin-right: 2%;     /* small horizontal gap between Chicken & Beef */
+    margin-bottom: 2%;    /* space between rows (like below Beef & above Sushi) */
   }
 
+  /* Remove right margin from Beef (second box) */
   .section:nth-of-type(2) {
-    margin-right: 0;      /* remove right margin from Beef */
+    margin-right: 0;
   }
 
+  /* Make Sushi full width and push it below */
   .section:nth-of-type(3) {
     width: 100%;
-    clear: both;
-    margin-top: 20px;     /* spacing above Sushi */
+    clear: both;          /* forces Sushi to drop below Chicken & Beef */
+    margin-top: 2%;       /* adds spacing above Sushi */
   }
 }
 
@@ -107,7 +107,23 @@ h1 {
 
 /* Mobile view (≤767px) */
 @media (max-width: 767px) {
+
+  /* Add padding to both sides of the screen so boxes don't touch edges */
+  body {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  /* Stack all 3 boxes vertically with clean gaps between them */
   .section {
-    width: 100%;
+    width: 100%;          /* each box fills the full width */
+    float: none;          /* stop floating for stacking */
+    clear: both;          /* ensures each starts on a new line */
+    margin-bottom: 20px;  /* space between each box */
+  }
+
+  /* Remove bottom margin from the last (Sushi) box */
+  .section:last-child {
+    margin-bottom: 0;
   }
 }
