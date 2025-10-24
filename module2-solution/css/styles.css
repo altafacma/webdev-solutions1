@@ -59,6 +59,8 @@ h1 {
   }
 
   .section:nth-of-type(3) {
+      margin-top: 20px; /* optional visual spacing */
+
     width: 100%;     /* Sushi takes full width */
     clear: both;     /* pushes it below the first row */
   }
