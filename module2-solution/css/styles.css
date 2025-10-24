@@ -24,7 +24,26 @@ h1 {
   padding: 40px 20px 20px;
   position: relative;
   font-weight: bold;
-  margin: 0; /* ❗ remove margins that break layout */
+  
+}
+/* Desktop spacing (≥992px) */
+@media (min-width: 992px) {
+  .section {
+    width: 31.33%;        /* stays roughly one-third each */
+    margin-right: 2%;     /* gap between boxes */
+    float: left;
+  }
+
+  /* Remove right margin from the last box (Sushi) */
+  .section:last-child {
+    margin-right: 0;
+  }
+
+  /* Optional: add left/right margin around the entire page */
+  body {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
 }
 
 
