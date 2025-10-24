@@ -9,6 +9,10 @@ body {
   margin: 0;
   padding: 0;
 }
+.container {
+  padding-left: 4%;
+  padding-right: 4%;
+}
 
 h1 {
   text-align: center;
@@ -75,55 +79,47 @@ h1 {
 
 /* Tablet view (768px–991px) */
 @media (min-width: 768px) and (max-width: 991px) {
-
-  /* Add nice padding on the left and right sides of the page */
-  body {
-    padding-left: 2%;
-    padding-right: 2%;
+  .container {
+    padding-left: 4%;
+    padding-right: 4%;
   }
 
-  /* Style each section box */
   .section {
-    float: left;          /* allows Chicken & Beef to sit side by side */
-    width: 49%;           /* each takes about half of the screen */
-    margin-right: 2%;     /* small horizontal gap between Chicken & Beef */
-    margin-bottom: 2%;    /* space between rows (like below Beef & above Sushi) */
+    float: left;
+    width: 48%;            /* slightly smaller to make room for side padding */
+    margin-right: 4%;
+    margin-bottom: 4%;
   }
 
-  /* Remove right margin from Beef (second box) */
   .section:nth-of-type(2) {
-    margin-right: 0;
+    margin-right: 0;       /* remove gap after Beef */
   }
 
-  /* Make Sushi full width and push it below */
   .section:nth-of-type(3) {
     width: 100%;
-    clear: both;          /* forces Sushi to drop below Chicken & Beef */
-    margin-top: 2%;       /* adds spacing above Sushi */
+    clear: both;
   }
 }
+
 
 
 
 /* Mobile view (≤767px) */
 @media (max-width: 767px) {
-
-  /* Add padding to both sides of the screen so boxes don't touch edges */
-  body {
-    padding-left: 4%;
-    padding-right: 4%;
+  .container {
+    padding-left: 6%;
+    padding-right: 6%;
   }
 
-  /* Stack all 3 boxes vertically with clean gaps between them */
   .section {
-    width: 100%;          /* each box fills the full width */
-    float: none;          /* stop floating for stacking */
-    clear: both;          /* ensures each starts on a new line */
-    margin-bottom: 15px;  /* space between each box */
+    width: 100%;
+    float: none;
+    clear: both;
+    margin-bottom: 20px;
   }
 
-  /* Remove bottom margin from the last (Sushi) box */
   .section:last-child {
     margin-bottom: 0;
   }
 }
+
