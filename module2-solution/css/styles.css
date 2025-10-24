@@ -57,17 +57,33 @@ h1 {
 /* Tablet view (768px–991px) */
 @media (min-width: 768px) and (max-width: 991px) {
   .section {
-    float: left;     /* makes boxes line up horizontally */
-    width: 50%;      /* two boxes take half each */
+    float: left;
+    width: 50%;
   }
 
   .section:nth-of-type(3) {
-      margin-top: 20px; /* optional visual spacing */
-
-    width: 100%;     /* Sushi takes full width */
-    clear: both;     /* pushes it below the first row */
+    width: 100%;
+    clear: both;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    float: left;
+    width: 49%;           /* slightly smaller to fit side-by-side */
+    margin-right: 2%;     /* add spacing between Chicken and Beef */
+  }
+
+  .section:nth-of-type(2) {
+    margin-right: 0;      /* remove right margin from Beef */
+  }
+
+  .section:nth-of-type(3) {
+    width: 100%;
+    clear: both;
+    margin-top: 20px;     /* spacing above Sushi */
+  }
+}
+
 
 
 /* Mobile view (≤767px) */
